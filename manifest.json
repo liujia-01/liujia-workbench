@@ -1,0 +1,16 @@
+{
+  "name": "工作台 · 刘佳",
+  "short_name": "工作台",
+  "description": "个人效率管理 - 时间轴日程、日记、饮食、体重、运动、DDL",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5F0EB",
+  "theme_color": "#E17055",
+  "icons": [{
+    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='112' fill='%23E17055'/><text x='256' y='340' text-anchor='middle' font-size='256' fill='white' font-family='sans-serif'>台</text></svg>",
+    "sizes": "512x512",
+    "type": "image/svg+xml",
+    "purpose": "any maskable"
+  }]
+}
