@@ -2,19 +2,30 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, minimal-ui">
 <title>工作台 · 刘佳</title>
-<!-- PWA: make it a real app -->
+<!-- PWA -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="工作台">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#E17055">
-<meta name="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23E17055'/><text x='50' y='68' text-anchor='middle' font-size='50' fill='white'>台</text></svg>">
+<meta name="msapplication-TileColor" content="#E17055">
+<meta name="msapplication-tap-highlight" content="no">
+<!-- Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="icon-512.png">
+<!-- Manifest -->
 <link rel="manifest" href="manifest.json">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23E17055'/><text x='50' y='68' text-anchor='middle' font-size='50' fill='white'>台</text></svg>">
+<!-- Service Worker -->
 <script>
-if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js')}
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js', {scope: '/'}).catch(function(e){
+    navigator.serviceWorker.register('sw.js', {scope: '/liujia-workbench/'});
+  });
+}
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
